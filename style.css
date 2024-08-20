@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+/* ANIMATION */
+	.center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.table {
+  width: 10px;
+  height: 10px;
+  background-color: #d4e5ff;
+  bottom: 870px;
+}
+.table .monitor-wrapper {
+  background: #050321;
+  width: 10px;
+  height: 10px;
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.3);
+  margin-right: 250px;
+}
+.table .monitor-wrapper .monitor {
+  width: 500px;
+  height: 40px;
+  background-color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: inset 0px 5px 10px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+}
+.table .monitor-wrapper .monitor p {
+  font-family: "VT323", monospace;
+  font-size: 25px;
+  position: relative;
+  display: inline-block;
+  animation: move 20s infinite;
+  color: black;
+}
+
+@keyframes move {
+  from {
+    left: 800px;
+  }
+  to {
+    left: -800px;
+  }
+}
+
+.parallelogram {
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+  height: 100px;
+}
+
+.parallelogram:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background-color: maroon;
+  transform: skewX(0deg);
+  transform-origin: top left;
+  clip-path: polygon(0% 0%, 98% 0%, 100% 50%, 98% 100%, 0% 100%);
+}
+
+.parallelogram1 {
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+  height: 50px;
+}
+
+.parallelogram1:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background-color: maroon;
+  transform: skewX(0deg);
+  transform-origin: top left;
+  clip-path: polygon(0% 0%, 98% 0%, 100% 50%, 98% 100%, 0% 100%);
+}
+
+
+
+.container {
+  margin-top: 50px;
+}
+
+.image-wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  backdrop-filter: blur(5px);
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.image-wrapper img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.text-wrapper {
+  flex: 1;
+  margin-left: 20px;
+}
